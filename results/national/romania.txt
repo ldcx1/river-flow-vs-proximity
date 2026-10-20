@@ -1,0 +1,22 @@
+GERMANY -> ROMANIA transfer with local calibration, per WFD water body.
+Target = WFD-2022 ecological status worse than good (all Romania).
+train pool: German national panel; test: 2268 WFD water bodies (13866 reaches), body prevalence 35.1% (chance ROC 0.5).
+
+  features / regime                         ROC [95% CI]              PR-AUC [95% CI]         
+  optical / zero-shot                       0.513 [0.489,0.537]    0.344 [0.320,0.373]
+  optical / DE->RO fine-tuned               0.601 [0.577,0.624]    0.401 [0.373,0.433]
+  optical / RO-only calibration             0.610 [0.587,0.634]    0.409 [0.381,0.443]
+
+  optical+flow-prior / zero-shot            0.448 [0.425,0.473]    0.312 [0.291,0.338]
+  optical+flow-prior / DE->RO fine-tuned    0.645 [0.621,0.668]    0.466 [0.433,0.505]
+  optical+flow-prior / RO-only calibration  0.653 [0.629,0.676]    0.491 [0.456,0.529]
+
+Flow-prior effect = (optical+flow-prior) minus optical, paired body bootstrap:
+  zero-shot                  dROC -0.065 [-0.091,-0.038]   dPR -0.032 [-0.050,-0.015]
+  DE->RO fine-tuned          dROC +0.044 [+0.026,+0.061]*  dPR +0.066 [+0.043,+0.089]
+  RO-only calibration        dROC +0.043 [+0.026,+0.059]*  dPR +0.082 [+0.059,+0.105]
+  (* ROC delta CI excludes 0)
+
+Region-specific optical retrieval: zero-shot transfer is weak; local WFD
+calibration (fine-tune or RO-only) is what makes the model usable in Romania.
+Weak-label stratum (N=2268 bodies): not comparable to German strong labels.

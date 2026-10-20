@@ -1,0 +1,11 @@
+graph 18692 | rows 411820 | sample 3000 | max flow-dist 60 km | min obs 12 | orient_match False
+
+signal    deseason       npairs  C_flow  C_euc   diff[CI]                p    verdict
+----------------------------------------------------------------------------------------------------
+turb      common-mode    n=1413 C_flow=+0.667 C_euc=+0.621 diff=+0.046[+0.029,+0.062] p=0.003 FLOW>EUC | H2 asym(long,n=1199)=+0.041[+0.004,+0.077]
+turb      seasonal       n=1413 C_flow=+0.676 C_euc=+0.647 diff=+0.029[+0.011,+0.047] p=0.029 FLOW>EUC | H2 asym(long,n=1199)=-0.006[-0.044,+0.033]
+ndci      common-mode    n=1413 C_flow=+0.622 C_euc=+0.476 diff=+0.146[+0.123,+0.169] p=0.000 FLOW>EUC | H2 asym(long,n=1199)=+0.113[+0.070,+0.154]
+ndci      seasonal       n=1413 C_flow=+0.613 C_euc=+0.512 diff=+0.101[+0.080,+0.121] p=0.000 FLOW>EUC | H2 asym(long,n=1199)=+0.087[+0.050,+0.124]
+
+H1: diff>0 with CI excluding 0 => flow co-fluctuation beats geography.
+H2 asym(long): >0 => downstream lags upstream (transport); ~0 likely unresolvable at monthly cadence (expected).

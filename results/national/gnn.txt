@@ -1,0 +1,13 @@
+snapshots: 48 months x 2597 nodes x 18 feats | edges 2404 | labeled cells 8100 (pos 994)
+prevalence 0.123 | 5 seeds (segment-grouped folds fixed; weight init + epoch shuffle varied)
+
+model                         ROC-AUC (mean+/-sd)     PR-AUC (mean+/-sd)
+------------------------------------------------------------------------
+MLP (no edges)                  0.586 +/- 0.010        0.161 +/- 0.006
+GAT (topology, directed)        0.576 +/- 0.021        0.151 +/- 0.010
+
+per-seed ROC-AUC  MLP: [0.576, 0.598, 0.597, 0.585, 0.574]
+per-seed ROC-AUC  GAT: [0.594, 0.601, 0.569, 0.578, 0.541]
+
+GAT - MLP ROC delta: -0.010 +/- 0.019 over 5 seeds (the graph layer does not beat the no-edge control).
+CV = positive-rate-balanced segment-grouped 5-fold (no month leakage); tie-aware AUC/AP.

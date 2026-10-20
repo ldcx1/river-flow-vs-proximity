@@ -1,0 +1,22 @@
+pass observations: 164457 over 714 segments
+in-situ readings (rule determinands, 2020-2023): 45873 (281 co-located same-day duplicates collapsed)
+matched events (<= 7d): 39725 (87% of readings)
+
+match rate by window:
+  +/-1d: 18409 events (40%), median lag 1d
+  +/-3d: 30794 events (67%), median lag 1d
+  +/-7d: 39725 events (87%), median lag 2d
+
+Spearman (in-situ value vs satellite index, +/-3d):
+  determinand         n       NDTI       NDCI  TURBIDITY  risk_score
+  Dissolved oxygen 13057       0.25      -0.11       0.06       0.15
+  BOD5             4387       0.17       0.14       0.04      -0.08
+  Ammonium         5945       0.34       0.05       0.21      -0.05
+  Nitrite            56       0.10       0.10       0.31       0.02
+  Nitrate          7287       0.22       0.05       0.06      -0.05
+  Chlorophyll a      62      -0.21       0.01      -0.08       0.44
+
+ROC-AUC: satellite risk_score predicts in-situ exceedance:
+  +/-1d: n=18409, positives=619 (3%), AUC=0.521
+  +/-3d: n=30794, positives=1083 (4%), AUC=0.516
+  +/-7d: n=39725, positives=1391 (4%), AUC=0.511

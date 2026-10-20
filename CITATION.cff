@@ -1,0 +1,72 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "As the Crow Flies, or as the River Flows? Graph Topology vs. Proximity in Satellite Water-Quality Monitoring"
+type: software
+version: "0.1.0"
+authors:
+  - family-names: "Leșe"
+    given-names: "Doru"
+    affiliation: "Technical University of Cluj-Napoca"
+  - family-names: "Vătafu"
+    given-names: "Monica"
+    affiliation: "Technical University of Cluj-Napoca"
+  - family-names: "Bărăștean"
+    given-names: "Carla"
+    affiliation: "Technical University of Cluj-Napoca"
+  - family-names: "Oprișa"
+    given-names: "Ciprian"
+    affiliation: "Technical University of Cluj-Napoca"
+license: Apache-2.0
+repository-code: "https://github.com/ldcx1/river-flow-vs-proximity"
+keywords:
+  - remote sensing
+  - river water quality
+  - Sentinel-2
+  - graph neural networks
+  - anomaly detection
+  - environmental monitoring
+abstract: >-
+  Code and derived data that reproduce the results of the IEEE ICCP 2026 paper
+  "As the Crow Flies, or as the River Flows? Graph Topology vs. Proximity in
+  Satellite Water-Quality Monitoring": one script per experiment, the captured run
+  logs, and the derived national data for Germany and Romania (EU-Hydro river
+  graphs, Sentinel-2 per-pass archives, EEA Waterbase labels, OpenStreetMap
+  facilities).
+preferred-citation:
+  type: conference-paper
+  title: "As the Crow Flies, or as the River Flows? Graph Topology vs. Proximity in Satellite Water-Quality Monitoring"
+  authors:
+    - family-names: "Leșe"
+      given-names: "Doru"
+    - family-names: "Vătafu"
+      given-names: "Monica"
+    - family-names: "Bărăștean"
+      given-names: "Carla"
+    - family-names: "Oprișa"
+      given-names: "Ciprian"
+  year: 2026
+  collection-title: "IEEE International Conference on Intelligent Computer Communication and Processing (ICCP)"
+  abstract: >-
+    When integrating spatial data with river networks, does modelling the physical
+    flow topology actually improve predictive power over simple proximity? Graph-
+    based learning models are often evaluated without a connectivity-matched
+    proximity baseline, so apparent improvements may reflect a larger neighbourhood
+    rather than the underlying network structure. We introduce a matched-baseline
+    evaluation protocol at national scale on two river networks. Germany (66,261
+    reaches) pairs a 14.6 M-observation Sentinel-2 archive with a public but sparse
+    in-situ chemistry record. Romania (18,692 reaches) has satellite coverage but no
+    Sentinel-era in-situ chemistry. To our knowledge, this is the first controlled
+    national-scale test of flow topology against connectivity-matched proximity in
+    satellite water-quality monitoring. The satellite optical features provide a
+    weak but usable screening proxy for pollution (ROC-AUC 0.60-0.62 for monthly
+    threshold exceedances). Comparing the flow graph to a matched proximity baseline
+    reveals a clear split in predictive utility. For static average pollution
+    levels, explicit flow topology offers no measurable advantage (two Romanian
+    exceptions aside), and a graph attention network does not overturn this null.
+    For temporal dynamics in the optical signal, topology does add value. The
+    clearest observational signal is temporal co-fluctuation: flow-connected reaches
+    rise and fall together significantly more than equally close but flow-
+    disconnected neighbours, a result that reproduces in both countries. Advantages
+    in anomaly detection on partly circular synthetic injections are smaller, and
+    the flow graph does not consistently improve source attribution, since pollution
+    near a facility is mostly inherited from upstream.

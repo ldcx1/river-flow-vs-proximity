@@ -1,0 +1,14 @@
+region=de reaches=66160 passes=14605119 thr(p95)=5364 hops=3 tol=+/-6d lookback=30d
+
+own passes in the 30 days before an exceedance: median 5
+
+(a) provenance: classified=397524 (facility-adjacent 193962) headwater=322888 insufficient=9844
+  class           all  facility-adj
+  concurrent    81.8%         82.2%
+  lagged         7.2%          7.0%
+  build-up       2.6%          2.4%
+  fresh spike    8.4%          8.3%
+
+(b) co-elevation control (paired, both sets observed)
+  all: n=395836 reaches=41375  flow 83.3%  control 85.6%  delta -2.2 pp [-2.4, -2.1]
+  facility-adjacent: n=193227 reaches=21270  flow 83.6%  control 86.0%  delta -2.5 pp [-2.7, -2.2]

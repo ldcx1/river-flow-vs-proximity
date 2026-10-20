@@ -1,0 +1,26 @@
+========================================================================
+CC2-Autocorrelation: partial Moran (beyond covariates) + stream variogram
+========================================================================
+  Dissolved oxygen n=56   partial I_flow=+0.145 I_euc=+0.058 diff=+0.087 p=0.558 ns
+    variogram short-range (<= 15 km) stream/euclidean ratio = 0.717 (stream more similar)
+  Nitrate          n=68   partial I_flow=+0.311 I_euc=+0.201 diff=+0.109 p=0.390 ns
+    variogram short-range (<= 15 km) stream/euclidean ratio = 0.911 (stream more similar)
+  TURBIDITY        n=65895 partial I_flow=+0.216 I_euc=+0.445 diff=-0.230 p=0.001 EUC>FLOW
+    variogram short-range (<= 15 km) stream/euclidean ratio = 0.899 (stream more similar)
+
+========================================================================
+Conditional co-fluctuation: temporal coherence by Strahler bin (monotonic trend)
+========================================================================
+  1-2 (headwater)    n=1415 C_flow-C_euc diff = +0.020 [+0.009,+0.031]
+  3-4 (mid)          n=540  C_flow-C_euc diff = +0.014 [-0.004,+0.032]
+  5+ (large)         n=690  C_flow-C_euc diff = +0.008 [-0.005,+0.022]
+  monotonic trend (advantage vs Strahler): rho=-1.000 slope=-0.006
+
+========================================================================
+Conditional value: incremental AUC + Strahler-stratified anomaly
+========================================================================
+  Conditional incremental AUC (graph beyond node+euclidean): base 0.968 -> full 0.976  gain +0.008 [+0.004,+0.012]
+  1-2 (headwater)    n=1559  graph-euclidean AUC delta = +0.019
+  3-4 (mid)          n=724   graph-euclidean AUC delta = -0.003
+  5+ (large)         n=315   graph-euclidean AUC delta = -0.026
+  monotonic trend: rho=-1.000 slope=-0.022

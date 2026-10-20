@@ -1,0 +1,11 @@
+graph 66261 | field turb: 66160 segs x 48 months
+
+tracing spatio-temporal event attribution (120 events)
+
+  static             top-1 0.317   MRR 0.449
+  spatio_temporal    top-1 0.367   MRR 0.534
+  euclidean          top-1 0.000   MRR 0.112
+  reversed           top-1 0.000   MRR 0.000
+
+  spatio-temporal - static top-1: +0.050 [+0.017, +0.092]  SPATIO-TEMPORAL WINS
+

@@ -1,0 +1,3 @@
+Germany: 113619 facilities, 66261 reaches, 48.85% within 1500 m of a facility
+  exceedance months on such reaches: 548/978 = 56.0%
+Romania: 21924 facilities, 18692 reaches, 18.05% within 1500 m of a facility

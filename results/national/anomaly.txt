@@ -1,0 +1,56 @@
+graph 66261 | field turb: 66160 segs x 48 months
+
+residual graph-residual  (pos=169, neg=1219, dropped=34% of cells - scores undefined, e.g. headwaters)
+
+  method                  ROC-AUC   PR-AUC   perm p
+  graph_expectation         0.997    0.983    0.001
+  node_temporal             0.968    0.718    0.001
+  spatial_euclidean         0.999    0.984    0.001
+
+  graph_expectation vs baselines (ROC-AUC delta, segment bootstrap 95% CI):
+    vs node_temporal        +0.029  [+0.020, +0.038]  GRAPH WINS
+    vs spatial_euclidean    -0.002  [-0.006, +0.001]  inconclusive
+  focused contrast (LOCAL injection vs INHERITED-high), ROC-AUC:
+    graph_expectation     0.999
+    node_temporal         0.921
+    spatial_euclidean     0.999
+
+break coherence-violation  (pos=296, neg=2302, dropped=0% of cells - scores undefined, e.g. headwaters)
+
+  method                  ROC-AUC   PR-AUC   perm p
+  graph_neighbors           0.976    0.782    0.001
+  node_temporal             0.862    0.339    0.001
+  spatial_euclidean         0.969    0.724    0.001
+
+  graph_neighbors vs baselines (ROC-AUC delta, segment bootstrap 95% CI):
+    vs node_temporal        +0.114  [+0.099, +0.129]  GRAPH WINS
+    vs spatial_euclidean    +0.007  [+0.002, +0.012]  GRAPH WINS
+  focused contrast (VIOLATION vs PROPAGATED plume), ROC-AUC:
+    graph_neighbors       0.937
+    node_temporal         0.643
+    spatial_euclidean     0.914
+
+recovery connected-subgraph events (20 runs)
+
+  flow components:      prec 0.031  rec 0.708  F1 0.059
+  euclidean components: prec 0.020  rec 0.728  F1 0.040
+
+  flow - euclidean F1: +0.019 [+0.013, +0.025]  GRAPH WINS
+
+denoise anomaly validator / denoiser (20 runs)
+
+  raw (no filter):   prec 0.014  rec 0.738
+  flow-corroborated: prec 0.025  rec 0.725  noise-reject 0.257
+  euc-corroborated:  prec 0.018  rec 0.736  noise-reject 0.019
+
+  flow - euc precision: +0.007 [+0.005, +0.009]  GRAPH WINS
+
+tracing spatio-temporal event attribution (120 events)
+
+  static             top-1 0.317   MRR 0.449
+  spatio_temporal    top-1 0.367   MRR 0.534
+  euclidean          top-1 0.000   MRR 0.112
+  reversed           top-1 0.000   MRR 0.000
+
+  spatio-temporal - static top-1: +0.050 [+0.017, +0.092]  SPATIO-TEMPORAL WINS
+

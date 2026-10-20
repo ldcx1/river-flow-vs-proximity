@@ -1,0 +1,17 @@
+panel: 7739 cells, 209 segments, prevalence 0.126 | 5 re-splits, 5-fold segment-grouped CV
+baseline PR-AUC (prevalence) = 0.126
+
+--- optical only (7 features) ---
+logreg   ROC 0.619+/-0.003  PR 0.184+/-0.001
+rf       ROC 0.599+/-0.004  PR 0.180+/-0.002
+xgb      ROC 0.605+/-0.002  PR 0.183+/-0.002
+
+--- all features (22 features) ---
+logreg   ROC 0.624+/-0.005  PR 0.184+/-0.002
+rf       ROC 0.602+/-0.003  PR 0.173+/-0.006
+xgb      ROC 0.599+/-0.016  PR 0.178+/-0.017
+
+logreg all-vs-optical ROC-AUC delta +0.010 [-0.020,+0.039]  P(>0)=0.745
+logreg all-vs-optical AP delta +0.006 [-0.015,+0.030]  P(>0)=0.693
+
+xgb optical top-10% screening: exceedance rate 0.235 vs base rate 0.126 (1.86x, n=773)

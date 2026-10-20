@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+figures/
+data/de/turb_series_national.csv
+data/de/turb_perdate_national_full.csv
+data/de/turb_perdate_national_full.csv.gz
+data/de/pollution_field_national.csv
+data/ro/turb_perdate_ro_full.csv

@@ -1,0 +1,14 @@
+region=ro passes=2179358 dates=631 thr(p95)=1887
+exceedances with an upstream baseline: 66918, facility-adjacent: 13439 (20%)
+
+(a) facility-adjacent exceedances
+  inherited dominates (local fraction < 0.5): 85.1%
+  local dominates (>= 0.5):                  14.9%
+  mean local fraction 0.204
+
+(b) local fraction, facility-adjacent minus facility-free
+  0.204 vs 0.221: -0.017 [-0.026, -0.008]
+
+(c) agreement with an observed step
+  local-dominated with upstream below threshold: 88%
+  inherited-dominated with upstream also above:  77%

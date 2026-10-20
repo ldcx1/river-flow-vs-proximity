@@ -1,0 +1,78 @@
+Benjamini-Hochberg multiplicity correction (two families).
+
+FAMILY A: positive graph effects + withdrawn ag-fusion rows (11 effects, FDR 0.05)
+  effect                                     p      BH p  survives
+  Co-fluctuation NDCI (common)          0.0010    0.0018   yes
+  Co-fluctuation NDCI (seasonal)        0.0010    0.0018   yes
+  Co-fluctuation turb (common)          0.0010    0.0018   yes
+  Co-fluctuation turb (seasonal)        0.0010    0.0018   yes
+  Conditional incremental value         0.0010    0.0018   yes
+  Attribution upstream vs reversed      0.0010    0.0018   yes
+  Basins (k=2)                          0.0013    0.0020   yes
+  Break coherence-violation             0.0061    0.0083   yes
+  Tracing spatio-temporal               0.0090    0.0110   yes
+  Fusion: ag-upstream vs optical        0.0323    0.0355   yes
+  Fusion: all-ag vs optical             0.0397    0.0397   yes
+  -> 11/11 survive at FDR 0.05.
+
+FAMILY B: full study family (positives + the study's null/negative tests) (25 effects, FDR 0.05)
+  effect                                     p      BH p  survives
+  Co-fluctuation NDCI (common)          0.0010    0.0031   yes
+  Co-fluctuation NDCI (seasonal)        0.0010    0.0031   yes
+  Co-fluctuation turb (common)          0.0010    0.0031   yes
+  Co-fluctuation turb (seasonal)        0.0010    0.0031   yes
+  Conditional incremental value         0.0010    0.0031   yes
+  Attribution upstream vs reversed      0.0010    0.0031   yes
+  Attribution vs random                 0.0010    0.0031   yes
+  Propagation turbidity                 0.0010    0.0031   yes
+  Basins (k=2)                          0.0013    0.0036   yes
+  Attribution vs euclidean              0.0024    0.0061   yes
+  Break coherence-violation             0.0061    0.0138   yes
+  Tracing spatio-temporal               0.0090    0.0187   yes
+  Fusion: ag-upstream vs optical        0.0323    0.0620   NO
+  Fusion: all-ag vs optical             0.0397    0.0709   NO
+  Gap-fill DO vs global                 0.1012    0.1686   NO
+  Propagation NDCI                      0.2221    0.3470   NO
+  Residual vs euclidean                 0.2627    0.3863   NO
+  Gap-fill Exceedance vs global         0.3420    0.4749   NO
+  Autocorrelation Nitrate               0.5740    0.7553   NO
+  Autocorrelation DO                    0.6580    0.8225   NO
+  Attribution vs permuted               0.6951    0.8275   NO
+  Gap-fill Nitrate vs global            0.8349    0.8850   NO
+  Detection physics vs optical          0.8446    0.8850   NO
+  Detection all vs optical              0.8496    0.8850   NO
+  Autocorrelation Exceedance            0.9660    0.9660   NO
+  -> 12/25 survive at FDR 0.05.
+
+Synthetic-injection effects (excluded from the FDR family above: their CIs
+are injection-run intervals, not population resamples; descriptive only):
+  Recovery connected-event (injection-run)     delta=+0.019 [+0.013, +0.025]
+  Denoise precision (injection-run)            delta=+0.007 [+0.005, +0.009]
+
+Fusion (uniform normal-approx p, broader family FDR 0.05):
+  Fusion: ag-upstream vs optical     -> does not survive
+  Fusion: all-ag vs optical          -> does not survive
+  Under the single uniform p-method neither fusion effect survives the broader
+  family. The land-cover fusion result is withdrawn and not in the paper.
+
+True comparison universe: 25 study effects + 40 resolution-sweep
+  comparisons = 65+ (Strahler strata, deseasoning modes and radius variants
+  add more, so treat 65 as a lower bound).
+  Family A effects surviving BH at m=65: 8/11.
+    survivors: Co-fluctuation NDCI (common), Co-fluctuation NDCI (seasonal), Co-fluctuation turb (common), Co-fluctuation turb (seasonal), Conditional incremental value, Attribution upstream vs reversed, Basins (k=2), Break coherence-violation
+
+  NOTE: BH here is two-sided (p from |point|/SE), so a Family-B 'survivor'
+  can be an effect significant against the graph. Attribution vs
+  random, Propagation turbidity, and Attribution vs euclidean are graph losses,
+  not wins. The positive graph survivors are the ones named below.
+
+Robust conclusion:
+  The graph-structure effects (co-fluctuation, break, tracing, attribution
+  direction, conditional, basins) survive BH under both families and a single
+  uniform p-method. At the full ~65-comparison universe the co-fluctuation,
+  conditional, attribution-direction and basin-scaling effects still survive; the
+  break effect survives only at m<=65 and drops out for any larger family (its p
+  sits on the FDR boundary), so we treat it as boundary-sensitive and do not
+  headline it. The tracing gain and the fusion gain do not survive (tracing is
+  partly definitional, fusion withdrawn). Recovery/denoise are reported as
+  synthetic-injection stability, not population effects.

@@ -1,0 +1,8 @@
+optical propagation 'TURBIDITY'  (flow 2796 / euc 2796 pairs)
+  Spearman r:  flow-downstream +0.615   euclidean +0.625   reversed +0.647   random -0.031
+  r_flow - r_euc -0.010  95% CI [-0.034, +0.015]  -> flow ~ Euclidean (CI includes 0)
+
+optical propagation 'NDCI'  (flow 2796 / euc 2796 pairs)
+  Spearman r:  flow-downstream +0.732   euclidean +0.698   reversed +0.705   random +0.001
+  r_flow - r_euc +0.034  95% CI [+0.011, +0.056]  -> FLOW > EUCLIDEAN (CI excludes 0)
+

@@ -1,0 +1,62 @@
+# upstream attribution, Germany | pct=p99 (excess>=5050.3) | point-source targets 20000 | facilities 113619
+# used targets (>= 5 upstream) 908
+
+--- radius 500 m | upstream base rate 12.9% ---
+  graph_upstream   MRR 0.247  hit@1 14.3% hit@3 29.4% hit@5 38.3%  lift@1 1.11x [0.96,1.27]
+  euclid_upstream  MRR 0.256  hit@1 15.9% hit@3 29.3% hit@5 38.8%  lift@1 1.23x [1.07,1.40]
+  graph - euclid   MRR   -0.009 [-0.030, +0.011]  tie (CI incl 0)
+  graph - euclid   lift@1 -0.12x [-0.34, +0.09]  tie (CI incl 0)
+
+--- radius 1000 m | upstream base rate 29.0% ---
+  graph_upstream   MRR 0.436  hit@1 33.3% hit@3 51.3% hit@5 57.2%  lift@1 1.15x [1.07,1.23]
+  euclid_upstream  MRR 0.427  hit@1 34.5% hit@3 47.4% hit@5 54.0%  lift@1 1.19x [1.11,1.28]
+  graph - euclid   MRR   +0.010 [-0.011, +0.030]  tie (CI incl 0)
+  graph - euclid   lift@1 -0.04x [-0.14, +0.06]  tie (CI incl 0)
+
+--- radius 1500 m | upstream base rate 42.9% ---
+  graph_upstream   MRR 0.549  hit@1 47.0% hit@3 61.8% hit@5 64.8%  lift@1 1.10x [1.04,1.15]
+  euclid_upstream  MRR 0.534  hit@1 47.6% hit@3 57.4% hit@5 61.2%  lift@1 1.11x [1.05,1.16]
+  graph - euclid   MRR   +0.015 [-0.005, +0.034]  tie (CI incl 0)
+  graph - euclid   lift@1 -0.01x [-0.08, +0.05]  tie (CI incl 0)
+
+--- radius 3000 m | upstream base rate 65.6% ---
+  graph_upstream   MRR 0.691  hit@1 65.2% hit@3 72.2% hit@5 74.2%  lift@1 0.99x [0.97,1.02]
+  euclid_upstream  MRR 0.689  hit@1 66.5% hit@3 70.6% hit@5 71.6%  lift@1 1.01x [0.99,1.04]
+  graph - euclid   MRR   +0.002 [-0.011, +0.014]  tie (CI incl 0)
+  graph - euclid   lift@1 -0.02x [-0.05, +0.01]  tie (CI incl 0)
+
+density stratification @ 1500 m (graph-euclid MRR within base-rate tertiles):
+  low  density (base 0.0%-14.3%, n=303): -0.006 [-0.027, +0.014]  tie (CI incl 0)
+  med  density (base 15.4%-66.0%, n=303): +0.038 [-0.009, +0.084]  tie (CI incl 0)
+  high density (base 66.0%-100.0%, n=302): +0.013 [-0.013, +0.040]  tie (CI incl 0)
+# upstream attribution, Germany | pct=p95 (excess>=3059.5) | point-source targets 20000 | facilities 113619
+# used targets (>= 5 upstream) 1121
+
+--- radius 500 m | upstream base rate 13.1% ---
+  graph_upstream   MRR 0.261  hit@1 14.4% hit@3 32.0% hit@5 40.6%  lift@1 1.09x [0.95,1.24]
+  euclid_upstream  MRR 0.271  hit@1 16.1% hit@3 32.4% hit@5 41.7%  lift@1 1.23x [1.09,1.38]
+  graph - euclid   MRR   -0.011 [-0.031, +0.010]  tie (CI incl 0)
+  graph - euclid   lift@1 -0.14x [-0.34, +0.06]  tie (CI incl 0)
+
+--- radius 1000 m | upstream base rate 31.1% ---
+  graph_upstream   MRR 0.485  hit@1 38.0% hit@3 56.9% hit@5 62.7%  lift@1 1.22x [1.15,1.30]
+  euclid_upstream  MRR 0.471  hit@1 38.6% hit@3 52.4% hit@5 59.3%  lift@1 1.24x [1.17,1.31]
+  graph - euclid   MRR   +0.014 [-0.007, +0.035]  tie (CI incl 0)
+  graph - euclid   lift@1 -0.02x [-0.11, +0.08]  tie (CI incl 0)
+
+--- radius 1500 m | upstream base rate 46.7% ---
+  graph_upstream   MRR 0.598  hit@1 51.8% hit@3 67.1% hit@5 69.9%  lift@1 1.11x [1.07,1.15]
+  euclid_upstream  MRR 0.594  hit@1 54.0% hit@3 62.8% hit@5 65.8%  lift@1 1.16x [1.11,1.20]
+  graph - euclid   MRR   +0.003 [-0.015, +0.021]  tie (CI incl 0)
+  graph - euclid   lift@1 -0.05x [-0.10, +0.01]  tie (CI incl 0)
+
+--- radius 3000 m | upstream base rate 70.2% ---
+  graph_upstream   MRR 0.737  hit@1 70.9% hit@3 75.6% hit@5 76.8%  lift@1 1.01x [0.99,1.03]
+  euclid_upstream  MRR 0.735  hit@1 72.3% hit@3 74.2% hit@5 75.2%  lift@1 1.03x [1.01,1.05]
+  graph - euclid   MRR   +0.002 [-0.008, +0.012]  tie (CI incl 0)
+  graph - euclid   lift@1 -0.02x [-0.04, +0.00]  tie (CI incl 0)
+
+density stratification @ 1500 m (graph-euclid MRR within base-rate tertiles):
+  low  density (base 0.0%-27.3%, n=374): -0.020 [-0.042, +0.003]  tie (CI incl 0)
+  med  density (base 27.5%-68.5%, n=374): +0.026 [-0.016, +0.067]  tie (CI incl 0)
+  high density (base 68.6%-100.0%, n=373): +0.004 [-0.020, +0.028]  tie (CI incl 0)

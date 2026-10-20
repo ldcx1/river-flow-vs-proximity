@@ -1,0 +1,4 @@
+break inject_decay_km=30: graph-euc +0.0074 [+0.0024,+0.0120]
+break inject_decay_km=15: graph-euc +0.0079 [+0.0042,+0.0117]
+tracing hop_decay=0.3: ST-static +0.050 [+0.017,+0.092]; euc MRR 0.112
+tracing hop_decay=0.6: ST-static +0.108 [+0.058,+0.167]; euc MRR 0.115

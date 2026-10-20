@@ -1,0 +1,14 @@
+region=de passes=14605119 dates=1449 thr(p95)=5364
+exceedances with an upstream baseline: 363393, facility-adjacent: 178265 (49%)
+
+(a) facility-adjacent exceedances
+  inherited dominates (local fraction < 0.5): 90.0%
+  local dominates (>= 0.5):                  10.0%
+  mean local fraction 0.143
+
+(b) local fraction, facility-adjacent minus facility-free
+  0.143 vs 0.143: +0.000 [-0.002, +0.002]
+
+(c) agreement with an observed step
+  local-dominated with upstream below threshold: 92%
+  inherited-dominated with upstream also above:  80%

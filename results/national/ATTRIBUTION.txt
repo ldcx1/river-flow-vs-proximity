@@ -1,0 +1,17 @@
+graph 66261 | facilities 113619 | target-months 48 | field-months 48
+
+attribution over 858 exceedance targets (facility within 1500 m)
+
+  method             MRR   hit@1   hit@3   hit@5   cand!=0
+  graph_upstream   0.585   51.2%   64.1%   68.5%      100%
+  euclidean        0.627   57.0%   65.9%   70.7%      100%
+  random           0.723   54.5%   90.1%   97.2%      100%
+  permuted_field   0.589   51.5%   63.9%   67.7%       97%
+  reversed         0.530   43.7%   60.8%   66.6%       91%
+
+  graph-upstream vs controls (MRR delta, target bootstrap 95% CI):
+    vs euclidean    -0.041  [-0.069, -0.016]  control wins
+    vs permuted_field -0.004  [-0.024, +0.016]  inconclusive
+    vs reversed     +0.056  [+0.025, +0.087]  GRAPH WINS
+    vs random       -0.137  [-0.173, -0.102]  control wins
+    vs reversed (paired, both non-empty, n=781) +0.046  [+0.013, +0.078]  GRAPH WINS

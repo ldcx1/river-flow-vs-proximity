@@ -1,0 +1,20 @@
+# Exact versions that produced the logs in results/national/ (Python 3.12.3).
+# pyproject.toml lists looser minimum versions. Use this file to match the logs:
+#   python -m pip install -r requirements-lock.txt
+#   python -m pip install -e ".[models,data,dev]"
+# XGBoost and scikit-learn versions can move some detection and ensemble numbers in
+# the third decimal.
+numpy==2.4.6
+scipy==1.18.0
+pandas==3.0.3
+xgboost==3.3.0
+scikit-learn==1.9.0
+matplotlib==3.11.0
+pytest==9.1.1
+
+# Only for scripts/run_gnn.py (the logs used the CPU build of torch):
+#   python -m pip install torch==2.12.1 --index-url https://download.pytorch.org/whl/cpu
+#   python -m pip install torch-geometric==2.8.0
+
+# Only for rebuilding data from raw sources (scripts/ingest/):
+#   python -m pip install earthengine-api==1.7.33 requests==2.34.2

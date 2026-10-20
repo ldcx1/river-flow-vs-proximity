@@ -1,0 +1,5 @@
+NDCI series: 66160 reaches x 48 months
+NDCI co-fluctuation (common-mode) by source Strahler bin:
+  1-2 (headwater)    n=1415 C_flow-C_euc diff = +0.040 [+0.025,+0.056]
+  3-4 (mid)          n=540  C_flow-C_euc diff = +0.072 [+0.051,+0.094]
+  5+ (large)         n=690  C_flow-C_euc diff = +0.128 [+0.100,+0.156]

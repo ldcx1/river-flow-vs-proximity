@@ -1,0 +1,17 @@
+66160 monitored segments in 729 outlet-basins
+
+size-ordered accretion (largest basin first; metric = flow - euclidean coherence diff):
+    k    segs     metric                 95% CI
+    1   15979      0.012       [-0.002, +0.029]
+    2   30033      0.023       [+0.008, +0.036]
+    3   39020      0.035       [+0.020, +0.050]
+    5   48845      0.017       [+0.003, +0.031]
+   10   53250      0.017       [+0.004, +0.031]
+   20   57050      0.026       [+0.014, +0.040]
+   50   61365      0.019       [+0.006, +0.032]
+  100   63359      0.026       [+0.012, +0.043]
+  200   64823      0.023       [+0.007, +0.040]
+  400   65767      0.020       [+0.003, +0.033]
+  729   66160      0.035       [+0.020, +0.050]
+
+random-order reference (n=3): final-k diff mean +0.035 (size-ordered final-k should match - same full set; the curve SHAPE is what differs)

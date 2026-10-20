@@ -1,0 +1,14 @@
+NATIONAL proxy correspondence: satellite index vs in-situ determinand,
+matched on (segment, month); tie-aware Spearman; segment cluster-bootstrap
+95% CI (2000 resamples of whole segments). Strata separate.
+
+  in-situ determinand      sat   Spearman r [95% CI]         N pairs   segs
+  Chlorophyll a            ndci  +0.003 [-0.349, +0.340]            84     11
+  Total suspended solids   turb  N=0 (too few to estimate)
+  Ammonium                 turb  +0.204 [+0.157, +0.248]          6083    205
+  BOD5                     turb  +0.065 [+0.008, +0.118]          4908    135
+  Nitrate                  turb  +0.067 [+0.012, +0.122]          6549    208
+  Dissolved oxygen         turb  +0.094 [+0.059, +0.128]          7461    191
+
+  Note: turbidity/suspended-solids/chlorophyll are sparse nationally; the
+  abundant in-situ (nutrients/oxygen) are not what the satellite optically sees.

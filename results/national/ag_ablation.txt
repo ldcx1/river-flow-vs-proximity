@@ -1,0 +1,17 @@
+NATIONAL ag ablation (segs 209, rows 7739, pos 12.6%); repeated 5x5-fold; tie-aware; PR baseline 0.126
+
+  config               ROC (mean+/-sd)    PR-AUC (mean+/-sd)
+  opt                 0.611 +/-0.002       0.183 +/-0.001 
+  opt+local           0.596 +/-0.005       0.210 +/-0.007 
+  opt+upstream        0.661 +/-0.015       0.241 +/-0.019 
+  opt+all ag          0.644 +/-0.010       0.228 +/-0.012 
+
+  PR-AUC deltas (segment cluster-bootstrap 95% CI):
+    opt+local      - opt        +0.032  [-0.016, +0.092]  P(>0)=89%  (incl. 0)
+    opt+upstream   - opt        +0.065  [+0.008, +0.127]  P(>0)=99%  (excl. 0)
+    opt+upstream   - opt+local  +0.033  [-0.053, +0.114]  P(>0)=78%  (incl. 0)
+    opt+all ag     - opt        +0.053  [+0.004, +0.105]  P(>0)=98%  (excl. 0)
+
+  DECISIVE 'opt+upstream - opt+local' = +0.033 [-0.053, +0.114] INCLUDES 0
+  => at this sample size the gain CANNOT be attributed to graph propagation
+  beyond the reach's own local cropland (a CI excluding 0 would show a graph-specific gain).

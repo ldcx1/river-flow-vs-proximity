@@ -1,0 +1,39 @@
+gap-filling for 'Dissolved oxygen'  (n=191, continuous)
+
+  method           RMSE      MAE
+  graph           0.871    0.675
+  euclidean       0.924    0.685
+  global          0.825    0.637
+  permuted        0.881    0.680
+
+  graph vs controls (RMSE reduction, segment bootstrap 95% CI; positive => graph better):
+    vs euclidean  +0.053  [-0.059, +0.174]  inconclusive
+    vs global     -0.046  [-0.103, +0.007]  inconclusive
+    vs permuted   +0.010  [-0.065, +0.084]  inconclusive
+
+gap-filling for 'Nitrate'  (n=208, continuous)
+
+  method           RMSE      MAE
+  graph           5.911    4.516
+  euclidean       6.118    4.421
+  global          5.944    4.718
+  permuted        7.148    5.697
+
+  graph vs controls (RMSE reduction, segment bootstrap 95% CI; positive => graph better):
+    vs euclidean  +0.207  [-0.505, +0.884]  inconclusive
+    vs global     +0.032  [-0.266, +0.336]  inconclusive
+    vs permuted   +1.236  [+0.709, +1.827]  GRAPH WINS
+
+gap-filling for 'exceedance flag'  (n=209, binary)
+
+  method           RMSE      MAE   ROC-AUC
+  graph           0.507    0.431     0.361
+  euclidean       0.575    0.330     0.658
+  global          0.492    0.481       n/a
+  permuted        0.566    0.489     0.488
+
+  graph vs controls (RMSE reduction, segment bootstrap 95% CI; positive => graph better):
+    vs euclidean  +0.067  [+0.012, +0.122]  GRAPH WINS
+    vs global     -0.016  [-0.048, +0.018]  inconclusive
+    vs permuted   +0.059  [+0.015, +0.101]  GRAPH WINS
+

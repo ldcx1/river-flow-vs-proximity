@@ -1,0 +1,32 @@
+graph 66261 | field turb: 66160 segs x 48 months
+
+residual graph-residual  (pos=169, neg=1219, dropped=34% of cells - scores undefined, e.g. headwaters)
+
+  method                  ROC-AUC   PR-AUC   perm p
+  graph_expectation         0.997    0.983    0.001
+  node_temporal             0.968    0.718    0.001
+  spatial_euclidean         0.999    0.984    0.001
+
+  graph_expectation vs baselines (ROC-AUC delta, segment bootstrap 95% CI):
+    vs node_temporal        +0.029  [+0.020, +0.038]  GRAPH WINS
+    vs spatial_euclidean    -0.002  [-0.006, +0.001]  inconclusive
+  focused contrast (LOCAL injection vs INHERITED-high), ROC-AUC:
+    graph_expectation     0.999
+    node_temporal         0.921
+    spatial_euclidean     0.999
+
+break coherence-violation  (pos=296, neg=2302, dropped=0% of cells - scores undefined, e.g. headwaters)
+
+  method                  ROC-AUC   PR-AUC   perm p
+  graph_neighbors           0.976    0.782    0.001
+  node_temporal             0.862    0.339    0.001
+  spatial_euclidean         0.970    0.731    0.001
+
+  graph_neighbors vs baselines (ROC-AUC delta, segment bootstrap 95% CI):
+    vs node_temporal        +0.114  [+0.099, +0.129]  GRAPH WINS
+    vs spatial_euclidean    +0.006  [+0.001, +0.011]  GRAPH WINS
+  focused contrast (VIOLATION vs PROPAGATED plume), ROC-AUC:
+    graph_neighbors       0.937
+    node_temporal         0.643
+    spatial_euclidean     0.917
+

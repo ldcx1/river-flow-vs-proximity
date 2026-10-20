@@ -1,0 +1,13 @@
+detection: 209 segments, 7739 rows, 978 positives = 12.6%; 5x5-fold segment-grouped CV; PR-AUC baseline 0.126
+
+  config                          ROC-AUC (mean+/-sd)   PR-AUC (mean+/-sd)
+  optical only                         0.605 +/-0.002       0.183 +/-0.002
+  optical + physics                    0.603 +/-0.004       0.183 +/-0.006
+  optical + topology                   0.615 +/-0.011       0.187 +/-0.015
+  all (o+p+t)                          0.598 +/-0.010       0.181 +/-0.015
+  all + pressure                       0.599 +/-0.016       0.178 +/-0.017
+  context only (no optical)            0.572 +/-0.012       0.162 +/-0.009
+
+  ablation deltas (PR-AUC, segment cluster-bootstrap 95% CI, 2000 resamples):
+    optical + physics - optical only         +0.002  [-0.019, +0.021]  P(>0)=56%  (incl. 0)
+    all (o+p+t) - optical only               +0.003  [-0.027, +0.035]  P(>0)=56%  (incl. 0)
